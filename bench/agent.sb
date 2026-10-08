@@ -1,0 +1,9 @@
+(version 1)
+(allow default)
+(deny file-read* file-write*
+  (subpath (string-append (param "HOME") "/.config")) (subpath (string-append (param "HOME") "/.ssh")) (subpath (string-append (param "HOME") "/Projects"))
+  (subpath (string-append (param "HOME") "/ai-posting")) (subpath (string-append (param "HOME") "/.claude")) (subpath (string-append (param "HOME") "/Documents"))
+  (subpath (string-append (param "HOME") "/Desktop")) (subpath (string-append (param "HOME") "/Downloads")) (subpath (string-append (param "HOME") "/.aws"))
+  (literal (string-append (param "HOME") "/.netrc")) (subpath "/private/tmp/claude-501") (subpath (string-append (param "HOME") "/Library/Keychains")))
+(deny file-write* (subpath (string-append (param "HOME") "")))
+(allow file-write* (subpath (string-append (param "HOME") "/.codex")) (subpath (string-append (param "HOME") "/Library/Caches")))

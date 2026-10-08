@@ -1,0 +1,361 @@
+run,setup,model,arm,question,group,repeat,verdict,says_uncertain,wall_seconds,timed_out,tool_calls,hubsql_calls,calls_via_code
+g1-05__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-05,count,1,wrong,False,29.9,False,5,1,0
+g1-05__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-05,count,2,right,False,205.3,False,135,2,128
+g1-05__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-05,count,3,wrong,False,47.0,False,5,1,0
+g1-05__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-05,count,1,right,True,143.2,False,243,3,239
+g1-05__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-05,count,2,wrong,True,227.0,False,138,0,137
+g1-05__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-05,count,3,right,True,73.7,False,77,0,76
+g1-05__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-05,count,1,wrong,False,33.0,False,6,3,0
+g1-05__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-05,count,2,right,False,332.0,False,74,13,0
+g1-05__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-05,count,3,right,False,189.1,False,68,8,0
+g1-05__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-05,count,1,wrong,True,11.0,False,5,4,0
+g1-05__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-05,count,2,wrong,False,10.6,False,5,4,0
+g1-05__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-05,count,3,wrong,False,18.3,False,6,5,0
+g1-05__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-05,count,1,wrong,False,26.6,False,4,1,0
+g1-05__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-05,count,2,right,False,142.2,False,65,4,0
+g1-05__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-05,count,3,wrong,False,31.5,False,4,1,0
+g1-05__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-05,count,1,wrong,True,92.0,False,14,8,0
+g1-05__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-05,count,2,right,True,135.3,False,23,20,0
+g1-05__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-05,count,3,wrong,True,12.4,False,4,3,0
+g1-05__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-05,count,1,right,False,204.9,False,119,0,0
+g1-05__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-05,count,2,right,False,155.8,False,110,0,109
+g1-05__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-05,count,3,right,False,252.8,False,123,0,0
+g1-05__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g1-05,count,1,wrong,True,155.0,False,119,0,112
+g1-05__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g1-05,count,2,right,False,764.2,False,2536,0,2531
+g1-05__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g1-05,count,3,right,True,115.2,False,138,0,134
+g1-05__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-05,count,1,wrong,False,42.0,False,3,0,0
+g1-05__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-05,count,2,right,False,278.3,False,72,0,0
+g1-05__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-05,count,3,wrong,False,36.1,False,2,0,0
+g1-05__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-05,count,1,wrong,True,28.9,False,8,0,0
+g1-05__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-05,count,2,wrong,True,16.8,False,5,0,0
+g1-05__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-05,count,3,wrong,True,21.8,False,8,0,0
+g1-05__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g1-05,count,1,right,False,218.6,False,107,0,0
+g1-05__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g1-05,count,2,right,False,96.6,False,59,0,0
+g1-05__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g1-05,count,3,right,False,129.3,False,65,0,0
+g1-05__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g1-05,count,1,wrong,True,45.6,False,8,0,0
+g1-05__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g1-05,count,2,wrong,True,183.4,False,20,0,0
+g1-05__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g1-05,count,3,wrong,True,43.6,False,10,0,0
+g1-09__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-09,count,1,right,False,36.3,False,5,1,0
+g1-09__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-09,count,2,right,False,51.1,False,6,1,0
+g1-09__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g1-09,count,3,right,False,43.9,False,5,1,0
+g1-09__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-09,count,1,right,True,55.4,False,53,1,53
+g1-09__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-09,count,2,right,False,37.0,False,54,2,52
+g1-09__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g1-09,count,3,right,True,41.1,False,54,2,52
+g1-09__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-09,count,1,right,False,130.2,False,16,12,0
+g1-09__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-09,count,2,right,False,67.8,False,8,4,0
+g1-09__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g1-09,count,3,right,False,108.0,False,12,9,0
+g1-09__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-09,count,1,right,False,16.0,False,5,3,0
+g1-09__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-09,count,2,right,True,20.9,False,6,4,0
+g1-09__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g1-09,count,3,right,False,27.9,False,6,4,0
+g1-09__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-09,count,1,right,False,32.2,False,5,2,0
+g1-09__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-09,count,2,right,False,47.8,False,6,3,0
+g1-09__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g1-09,count,3,right,False,32.0,False,5,2,0
+g1-09__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-09,count,1,right,False,9.8,False,3,1,0
+g1-09__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-09,count,2,right,False,9.0,False,3,1,0
+g1-09__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g1-09,count,3,right,True,13.2,False,3,1,0
+g1-09__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-09,count,1,right,False,245.4,False,708,0,706
+g1-09__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-09,count,2,right,False,258.6,False,707,0,703
+g1-09__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g1-09,count,3,right,False,232.1,False,706,0,702
+g1-09__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g1-09,count,1,right,True,44.1,False,68,0,68
+g1-09__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g1-09,count,2,right,True,62.8,False,68,0,68
+g1-09__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g1-09,count,3,right,True,46.4,False,67,0,67
+g1-09__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-09,count,1,right,False,73.6,False,10,0,0
+g1-09__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-09,count,2,right,False,78.1,False,7,0,0
+g1-09__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g1-09,count,3,right,False,136.7,False,15,0,0
+g1-09__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-09,count,1,right,False,27.4,False,11,0,0
+g1-09__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-09,count,2,right,True,26.2,False,11,0,0
+g1-09__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g1-09,count,3,right,True,32.3,False,11,0,0
+g1-09__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g1-09,count,1,right,False,369.0,False,710,0,0
+g1-09__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g1-09,count,2,right,False,104.9,False,10,0,0
+g1-09__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g1-09,count,3,right,False,151.3,False,13,0,0
+g1-09__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g1-09,count,1,right,True,17.2,False,4,0,0
+g1-09__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g1-09,count,2,right,False,31.3,False,6,0,0
+g1-09__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g1-09,count,3,right,True,36.4,False,4,0,0
+g2-04__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-04,dropdown-ranking,1,right,False,40.6,False,7,2,0
+g2-04__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-04,dropdown-ranking,2,right,False,32.5,False,5,1,0
+g2-04__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-04,dropdown-ranking,3,right,False,31.1,False,5,1,0
+g2-04__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-04,dropdown-ranking,1,right,True,12.6,False,2,1,0
+g2-04__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-04,dropdown-ranking,2,right,False,7.8,False,2,1,0
+g2-04__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-04,dropdown-ranking,3,right,True,11.5,False,2,1,0
+g2-04__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-04,dropdown-ranking,1,right,False,43.7,False,15,12,0
+g2-04__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-04,dropdown-ranking,2,right,False,51.8,False,15,12,0
+g2-04__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-04,dropdown-ranking,3,right,False,40.8,False,15,12,0
+g2-04__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-04,dropdown-ranking,1,right,True,20.4,False,14,12,0
+g2-04__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-04,dropdown-ranking,2,right,True,27.1,False,14,12,0
+g2-04__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-04,dropdown-ranking,3,right,False,21.1,False,14,12,0
+g2-04__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-04,dropdown-ranking,1,right,False,31.9,False,6,2,0
+g2-04__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-04,dropdown-ranking,2,right,False,67.1,False,5,1,0
+g2-04__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-04,dropdown-ranking,3,right,False,41.1,False,6,2,0
+g2-04__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-04,dropdown-ranking,1,right,False,9.3,False,3,1,0
+g2-04__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-04,dropdown-ranking,2,right,True,9.0,False,3,1,0
+g2-04__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-04,dropdown-ranking,3,right,True,9.8,False,3,1,0
+g2-04__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-04,dropdown-ranking,1,right,False,108.9,False,254,0,251
+g2-04__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-04,dropdown-ranking,2,right,False,111.3,False,69,0,0
+g2-04__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-04,dropdown-ranking,3,right,False,97.3,False,252,0,0
+g2-04__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g2-04,dropdown-ranking,1,right,False,82.2,False,303,0,303
+g2-04__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g2-04,dropdown-ranking,2,right,True,107.2,False,92,0,53
+g2-04__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g2-04,dropdown-ranking,3,right,True,114.9,False,303,0,302
+g2-04__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-04,dropdown-ranking,1,right,False,85.2,False,252,0,0
+g2-04__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-04,dropdown-ranking,2,right,False,98.5,False,253,0,0
+g2-04__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-04,dropdown-ranking,3,right,False,129.2,False,254,0,0
+g2-04__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-04,dropdown-ranking,1,right,False,57.3,False,37,0,0
+g2-04__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-04,dropdown-ranking,2,right,True,49.7,False,33,0,0
+g2-04__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-04,dropdown-ranking,3,right,False,39.5,False,25,0,0
+g2-04__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g2-04,dropdown-ranking,1,right,False,151.5,False,254,0,0
+g2-04__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g2-04,dropdown-ranking,2,right,False,122.6,False,253,0,0
+g2-04__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g2-04,dropdown-ranking,3,right,False,112.5,False,255,0,0
+g2-04__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g2-04,dropdown-ranking,1,right,True,40.7,False,26,0,0
+g2-04__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g2-04,dropdown-ranking,2,right,True,53.8,False,32,0,0
+g2-04__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g2-04,dropdown-ranking,3,right,True,55.0,False,31,0,0
+g2-10__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-10,dropdown-ranking,1,right,False,56.7,False,17,1,0
+g2-10__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-10,dropdown-ranking,2,right,False,89.3,False,13,0,0
+g2-10__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g2-10,dropdown-ranking,3,right,False,35.3,False,4,0,0
+g2-10__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-10,dropdown-ranking,1,wrong order,True,5.9,False,1,1,0
+g2-10__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-10,dropdown-ranking,2,right,True,8.1,False,2,1,0
+g2-10__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g2-10,dropdown-ranking,3,right,True,9.4,False,2,1,0
+g2-10__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-10,dropdown-ranking,1,right,False,52.3,False,15,12,0
+g2-10__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-10,dropdown-ranking,2,right,False,45.4,False,14,11,0
+g2-10__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g2-10,dropdown-ranking,3,right,False,47.0,False,16,13,0
+g2-10__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-10,dropdown-ranking,1,right,False,18.7,False,11,9,0
+g2-10__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-10,dropdown-ranking,2,"right list, counts off",True,14.5,False,7,5,0
+g2-10__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g2-10,dropdown-ranking,3,right,False,24.4,False,11,5,0
+g2-10__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-10,dropdown-ranking,1,right,False,39.9,False,14,0,0
+g2-10__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-10,dropdown-ranking,2,right,False,70.1,False,16,1,0
+g2-10__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g2-10,dropdown-ranking,3,right,False,58.6,False,16,1,0
+g2-10__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-10,dropdown-ranking,1,right,True,7.8,False,2,1,0
+g2-10__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-10,dropdown-ranking,2,right,True,7.4,False,3,1,0
+g2-10__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g2-10,dropdown-ranking,3,right,True,8.1,False,3,1,0
+g2-10__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-10,dropdown-ranking,1,right,False,38.1,False,4,0,0
+g2-10__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-10,dropdown-ranking,2,right,False,35.5,False,4,0,0
+g2-10__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g2-10,dropdown-ranking,3,right,False,37.6,False,4,0,0
+g2-10__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g2-10,dropdown-ranking,1,right,False,27.8,False,3,0,1
+g2-10__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g2-10,dropdown-ranking,2,right,True,27.2,False,11,0,0
+g2-10__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g2-10,dropdown-ranking,3,right,True,21.3,False,5,0,5
+g2-10__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-10,dropdown-ranking,1,right,False,31.0,False,12,0,0
+g2-10__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-10,dropdown-ranking,2,right,False,104.6,False,13,0,0
+g2-10__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g2-10,dropdown-ranking,3,right,False,29.6,False,12,0,0
+g2-10__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-10,dropdown-ranking,1,right,False,20.5,False,11,0,0
+g2-10__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-10,dropdown-ranking,2,right,True,21.4,False,11,0,0
+g2-10__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g2-10,dropdown-ranking,3,right,False,21.4,False,11,0,0
+g2-10__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g2-10,dropdown-ranking,1,right,False,43.2,False,14,0,0
+g2-10__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g2-10,dropdown-ranking,2,right,False,37.3,False,5,0,0
+g2-10__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g2-10,dropdown-ranking,3,right,False,35.5,False,4,0,0
+g2-10__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g2-10,dropdown-ranking,1,right,False,21.7,False,12,0,0
+g2-10__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g2-10,dropdown-ranking,2,right,False,22.3,False,11,0,0
+g2-10__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g2-10,dropdown-ranking,3,right,False,23.6,False,11,0,0
+g3-02__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-02,breakdown,1,right,False,20.0,False,4,0,0
+g3-02__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-02,breakdown,2,right,False,30.5,False,5,0,0
+g3-02__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-02,breakdown,3,right,False,27.7,False,6,0,0
+g3-02__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-02,breakdown,1,right,False,9.4,False,3,1,0
+g3-02__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-02,breakdown,2,right,False,27.9,False,6,1,0
+g3-02__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-02,breakdown,3,right,True,12.1,False,4,1,0
+g3-02__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-02,breakdown,1,right,False,35.8,False,8,5,0
+g3-02__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-02,breakdown,2,right,False,30.0,False,6,4,0
+g3-02__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-02,breakdown,3,right,False,37.7,False,8,5,0
+g3-02__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-02,breakdown,1,right,True,11.1,False,6,5,0
+g3-02__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-02,breakdown,2,right,True,12.9,False,6,5,0
+g3-02__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-02,breakdown,3,right,False,13.3,False,6,5,0
+g3-02__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-02,breakdown,1,right,False,26.9,False,7,0,0
+g3-02__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-02,breakdown,2,right,False,33.1,False,7,0,0
+g3-02__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-02,breakdown,3,right,False,34.3,False,8,0,0
+g3-02__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-02,breakdown,1,right,False,15.3,False,7,1,0
+g3-02__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-02,breakdown,2,right,False,15.4,False,6,1,0
+g3-02__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-02,breakdown,3,right,True,8.5,False,2,1,0
+g3-02__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-02,breakdown,1,right,False,23.7,False,4,0,0
+g3-02__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-02,breakdown,2,right,False,25.4,False,5,0,0
+g3-02__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-02,breakdown,3,right,False,29.2,False,5,0,0
+g3-02__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g3-02,breakdown,1,right,False,10.4,False,4,0,0
+g3-02__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g3-02,breakdown,2,right,False,9.9,False,4,0,0
+g3-02__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g3-02,breakdown,3,right,False,50.0,False,9,0,5
+g3-02__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-02,breakdown,1,right,False,22.8,False,5,0,0
+g3-02__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-02,breakdown,2,right,False,27.6,False,5,0,0
+g3-02__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-02,breakdown,3,right,False,23.3,False,5,0,0
+g3-02__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-02,breakdown,1,right,False,10.0,False,4,0,0
+g3-02__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-02,breakdown,2,right,False,8.1,False,4,0,0
+g3-02__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-02,breakdown,3,right,False,9.6,False,4,0,0
+g3-02__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g3-02,breakdown,1,right,False,23.9,False,6,0,0
+g3-02__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g3-02,breakdown,2,right,False,29.4,False,7,0,0
+g3-02__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g3-02,breakdown,3,right,False,22.8,False,7,0,0
+g3-02__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g3-02,breakdown,1,right,False,9.2,False,4,0,0
+g3-02__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g3-02,breakdown,2,right,False,9.3,False,4,0,0
+g3-02__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g3-02,breakdown,3,right,False,13.6,False,4,0,0
+g3-04__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-04,breakdown,1,right,False,37.1,False,5,1,0
+g3-04__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-04,breakdown,2,right,False,52.9,False,7,1,0
+g3-04__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g3-04,breakdown,3,right,False,39.8,False,5,1,0
+g3-04__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-04,breakdown,1,right,False,19.3,False,3,1,0
+g3-04__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-04,breakdown,2,right,True,8.5,False,3,1,0
+g3-04__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g3-04,breakdown,3,right,False,7.8,False,3,1,0
+g3-04__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-04,breakdown,1,right,False,62.5,False,30,27,0
+g3-04__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-04,breakdown,2,right,False,69.4,False,30,27,0
+g3-04__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g3-04,breakdown,3,right,False,64.7,False,30,27,0
+g3-04__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-04,breakdown,1,right,False,13.2,False,6,4,0
+g3-04__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-04,breakdown,2,right,True,16.5,False,10,8,0
+g3-04__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g3-04,breakdown,3,right,True,18.3,False,9,7,0
+g3-04__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-04,breakdown,1,right,False,37.5,False,6,1,0
+g3-04__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-04,breakdown,2,right,False,35.4,False,5,1,0
+g3-04__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g3-04,breakdown,3,right,False,34.4,False,5,1,0
+g3-04__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-04,breakdown,1,right,False,7.8,False,3,1,0
+g3-04__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-04,breakdown,2,right,False,8.1,False,3,1,0
+g3-04__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g3-04,breakdown,3,right,False,8.1,False,3,1,0
+g3-04__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-04,breakdown,1,right,False,52.9,False,30,0,0
+g3-04__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-04,breakdown,2,right,False,70.1,False,32,0,0
+g3-04__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g3-04,breakdown,3,right,False,60.2,False,32,0,0
+g3-04__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g3-04,breakdown,1,right,False,54.5,False,53,0,52
+g3-04__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g3-04,breakdown,2,right,False,66.5,False,54,0,27
+g3-04__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g3-04,breakdown,3,right,False,87.6,False,54,0,27
+g3-04__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-04,breakdown,1,right,False,42.9,False,30,0,0
+g3-04__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-04,breakdown,2,right,False,128.5,False,34,0,0
+g3-04__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g3-04,breakdown,3,right,False,48.2,False,30,0,0
+g3-04__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-04,breakdown,1,right,True,42.1,False,27,0,0
+g3-04__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-04,breakdown,2,right,False,36.4,False,27,0,0
+g3-04__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g3-04,breakdown,3,right,False,38.6,False,27,0,0
+g3-04__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g3-04,breakdown,1,right,False,49.1,False,31,0,0
+g3-04__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g3-04,breakdown,2,right,False,53.2,False,29,0,0
+g3-04__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g3-04,breakdown,3,right,False,54.6,False,31,0,0
+g3-04__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g3-04,breakdown,1,right,False,42.4,False,27,0,0
+g3-04__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g3-04,breakdown,2,right,False,39.6,False,27,0,0
+g3-04__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g3-04,breakdown,3,right,False,39.4,False,27,0,0
+g4-09__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-09,free-text-ranking,1,right,False,79.3,False,8,3,1
+g4-09__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-09,free-text-ranking,2,right,False,384.7,False,478,5,463
+g4-09__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-09,free-text-ranking,3,right,False,355.5,False,943,2,933
+g4-09__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-09,free-text-ranking,1,right,True,39.5,False,2,1,0
+g4-09__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-09,free-text-ranking,2,right,True,11.4,False,2,1,0
+g4-09__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-09,free-text-ranking,3,right,True,14.4,False,1,1,0
+g4-09__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-09,free-text-ranking,1,right,False,103.5,False,29,25,0
+g4-09__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-09,free-text-ranking,2,right,False,147.0,False,42,36,0
+g4-09__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-09,free-text-ranking,3,right,False,127.5,False,33,30,0
+g4-09__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-09,free-text-ranking,1,"right list, counts off",False,26.2,False,16,14,0
+g4-09__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-09,free-text-ranking,2,right,False,30.7,False,16,14,0
+g4-09__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-09,free-text-ranking,3,right,True,25.9,False,14,12,0
+g4-09__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-09,free-text-ranking,1,right,False,62.3,False,8,2,0
+g4-09__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-09,free-text-ranking,2,right,False,58.9,False,8,3,0
+g4-09__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-09,free-text-ranking,3,right,False,71.0,False,10,4,0
+g4-09__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-09,free-text-ranking,1,right,True,8.6,False,2,1,0
+g4-09__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-09,free-text-ranking,2,right,True,8.4,False,2,1,0
+g4-09__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-09,free-text-ranking,3,right,True,20.4,False,2,1,0
+g4-09__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-09,free-text-ranking,1,right,False,272.3,False,750,0,745
+g4-09__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-09,free-text-ranking,2,right,False,310.9,False,526,0,518
+g4-09__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-09,free-text-ranking,3,right,False,263.8,False,770,0,757
+g4-09__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g4-09,free-text-ranking,1,right,False,112.7,False,439,0,439
+g4-09__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g4-09,free-text-ranking,2,right,False,146.2,False,439,0,439
+g4-09__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g4-09,free-text-ranking,3,right,True,154.9,False,438,0,438
+g4-09__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-09,free-text-ranking,1,"right list, counts off",False,163.8,False,98,0,0
+g4-09__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-09,free-text-ranking,2,right,False,242.6,False,188,0,0
+g4-09__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-09,free-text-ranking,3,"right list, counts off",False,132.2,False,96,0,0
+g4-09__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-09,free-text-ranking,1,"right list, counts off",True,37.8,False,21,0,0
+g4-09__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-09,free-text-ranking,2,"right list, counts off",True,51.2,False,32,0,0
+g4-09__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-09,free-text-ranking,3,"right list, counts off",True,125.0,False,28,0,0
+g4-09__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g4-09,free-text-ranking,1,right,False,260.7,False,393,0,0
+g4-09__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g4-09,free-text-ranking,2,right,False,323.1,False,393,0,0
+g4-09__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g4-09,free-text-ranking,3,right,False,226.5,False,91,0,0
+g4-09__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g4-09,free-text-ranking,1,"right list, counts off",True,44.4,False,21,0,0
+g4-09__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g4-09,free-text-ranking,2,"right list, counts off",True,46.0,False,22,0,0
+g4-09__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g4-09,free-text-ranking,3,"right list, counts off",True,42.2,False,20,0,0
+g4-10__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-10,free-text-ranking,1,right,False,277.6,False,495,1,491
+g4-10__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-10,free-text-ranking,2,right,False,162.2,False,18,2,10
+g4-10__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g4-10,free-text-ranking,3,right,False,245.7,False,479,3,469
+g4-10__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-10,free-text-ranking,1,right,True,36.0,False,3,1,0
+g4-10__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-10,free-text-ranking,2,right,True,12.8,False,3,1,0
+g4-10__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g4-10,free-text-ranking,3,right,True,17.6,False,3,1,0
+g4-10__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-10,free-text-ranking,1,right,False,252.1,False,52,33,0
+g4-10__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-10,free-text-ranking,2,right,False,234.2,False,63,56,0
+g4-10__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g4-10,free-text-ranking,3,right,False,258.2,False,57,37,0
+g4-10__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-10,free-text-ranking,1,right,True,39.4,False,19,17,0
+g4-10__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-10,free-text-ranking,2,right,True,46.9,False,22,20,0
+g4-10__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g4-10,free-text-ranking,3,right,True,91.5,False,58,55,0
+g4-10__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-10,free-text-ranking,1,right,False,69.3,False,7,3,0
+g4-10__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-10,free-text-ranking,2,right,False,428.5,False,483,3,0
+g4-10__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g4-10,free-text-ranking,3,right,False,163.4,False,22,6,0
+g4-10__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-10,free-text-ranking,1,right,True,10.5,False,3,1,0
+g4-10__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-10,free-text-ranking,2,right,True,15.1,False,3,1,0
+g4-10__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g4-10,free-text-ranking,3,right,True,12.5,False,3,1,0
+g4-10__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-10,free-text-ranking,1,right,False,235.2,False,476,0,471
+g4-10__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-10,free-text-ranking,2,right,False,182.5,False,473,0,469
+g4-10__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g4-10,free-text-ranking,3,right,False,167.2,False,472,0,469
+g4-10__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g4-10,free-text-ranking,1,right,False,161.3,False,523,0,523
+g4-10__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g4-10,free-text-ranking,2,right,True,228.5,False,670,0,670
+g4-10__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g4-10,free-text-ranking,3,right,False,190.9,False,524,0,523
+g4-10__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-10,free-text-ranking,1,right,False,330.8,False,334,0,0
+g4-10__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-10,free-text-ranking,2,right,False,320.0,False,330,0,0
+g4-10__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g4-10,free-text-ranking,3,right,False,361.1,False,371,0,0
+g4-10__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-10,free-text-ranking,1,right,True,164.0,False,86,0,0
+g4-10__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-10,free-text-ranking,2,wrong list,True,89.0,False,55,0,0
+g4-10__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g4-10,free-text-ranking,3,wrong list,True,47.9,False,26,0,0
+g4-10__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g4-10,free-text-ranking,1,right,False,301.4,False,476,0,0
+g4-10__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g4-10,free-text-ranking,2,right,False,368.5,False,476,0,0
+g4-10__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g4-10,free-text-ranking,3,right,False,283.4,False,476,0,0
+g4-10__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g4-10,free-text-ranking,1,wrong list,True,36.9,False,15,0,0
+g4-10__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g4-10,free-text-ranking,2,wrong list,True,48.4,False,16,0,0
+g4-10__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g4-10,free-text-ranking,3,wrong list,True,54.8,False,23,0,0
+g5-09__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-09,aggregate,1,right,False,19.1,False,2,0,0
+g5-09__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-09,aggregate,2,right,False,39.9,False,6,1,0
+g5-09__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-09,aggregate,3,right,False,46.4,False,6,1,0
+g5-09__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-09,aggregate,1,right,False,14.7,False,2,1,0
+g5-09__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-09,aggregate,2,right,False,8.7,False,2,2,0
+g5-09__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-09,aggregate,3,right,False,8.1,False,2,1,0
+g5-09__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-09,aggregate,1,right,False,24.5,False,4,1,0
+g5-09__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-09,aggregate,2,right,False,27.1,False,4,1,0
+g5-09__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-09,aggregate,3,right,False,21.7,False,4,1,0
+g5-09__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-09,aggregate,1,right,False,13.8,False,6,3,0
+g5-09__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-09,aggregate,2,right,False,13.4,False,5,3,0
+g5-09__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-09,aggregate,3,right,False,15.5,False,4,3,0
+g5-09__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-09,aggregate,1,right,False,34.3,False,6,1,0
+g5-09__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-09,aggregate,2,right,False,28.7,False,6,1,0
+g5-09__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-09,aggregate,3,right,False,30.9,False,6,1,0
+g5-09__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-09,aggregate,1,right,False,9.1,False,3,1,0
+g5-09__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-09,aggregate,2,right,False,12.5,False,3,1,0
+g5-09__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-09,aggregate,3,right,False,8.7,False,3,1,0
+g5-09__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-09,aggregate,1,right,False,28.6,False,2,0,0
+g5-09__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-09,aggregate,2,right,False,21.8,False,2,0,0
+g5-09__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-09,aggregate,3,right,False,26.0,False,2,0,0
+g5-09__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g5-09,aggregate,1,right,False,24.0,False,4,0,3
+g5-09__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g5-09,aggregate,2,right,False,14.8,False,3,0,2
+g5-09__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g5-09,aggregate,3,right,False,40.7,False,4,0,3
+g5-09__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-09,aggregate,1,right,False,21.1,False,3,0,0
+g5-09__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-09,aggregate,2,right,False,38.4,False,5,0,0
+g5-09__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-09,aggregate,3,right,False,31.9,False,1,0,0
+g5-09__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-09,aggregate,1,right,False,8.4,False,1,0,0
+g5-09__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-09,aggregate,2,right,False,6.2,False,1,0,0
+g5-09__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-09,aggregate,3,right,False,6.1,False,1,0,0
+g5-09__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g5-09,aggregate,1,right,False,29.1,False,4,0,0
+g5-09__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g5-09,aggregate,2,right,False,21.9,False,3,0,0
+g5-09__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g5-09,aggregate,3,right,False,24.3,False,3,0,0
+g5-09__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g5-09,aggregate,1,right,False,5.5,False,1,0,0
+g5-09__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g5-09,aggregate,2,right,False,14.6,False,2,0,0
+g5-09__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g5-09,aggregate,3,right,False,14.1,False,2,0,0
+g5-10__Q-code__gpt61sol__r1,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-10,aggregate,1,right,False,37.7,False,6,1,0
+g5-10__Q-code__gpt61sol__r2,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-10,aggregate,2,right,False,33.9,False,5,1,0
+g5-10__Q-code__gpt61sol__r3,"Codex, HubSQL + shell",gpt-6.1-sol (xhigh),Q-code,g5-10,aggregate,3,right,False,24.8,False,5,1,0
+g5-10__Q-code__sonnet__r1,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-10,aggregate,1,right,True,11.2,False,1,1,0
+g5-10__Q-code__sonnet__r2,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-10,aggregate,2,right,False,8.4,False,1,1,0
+g5-10__Q-code__sonnet__r3,"Claude with code, HubSQL",claude-sonnet-5-5,Q-code,g5-10,aggregate,3,right,False,13.8,False,1,1,0
+g5-10__Q-expert__gpt61sol__r1,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-10,aggregate,1,right,False,31.2,False,5,2,0
+g5-10__Q-expert__gpt61sol__r2,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-10,aggregate,2,right,False,54.1,False,6,3,0
+g5-10__Q-expert__gpt61sol__r3,"Codex, HubSQL + guide",gpt-6.1-sol (xhigh),Q-expert,g5-10,aggregate,3,right,False,34.4,False,5,2,0
+g5-10__Q-expert__sonnet__r1,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-10,aggregate,1,right,True,13.6,False,3,1,0
+g5-10__Q-expert__sonnet__r2,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-10,aggregate,2,right,False,17.5,False,3,1,0
+g5-10__Q-expert__sonnet__r3,"Claude, no code, HubSQL + guide",claude-sonnet-5-5,Q-expert,g5-10,aggregate,3,right,True,11.6,False,4,2,0
+g5-10__Q__gpt61sol__r1,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-10,aggregate,1,right,False,38.2,False,5,1,0
+g5-10__Q__gpt61sol__r2,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-10,aggregate,2,right,False,31.6,False,5,1,0
+g5-10__Q__gpt61sol__r3,"Codex, HubSQL",gpt-6.1-sol (xhigh),Q,g5-10,aggregate,3,right,False,22.8,False,5,1,0
+g5-10__Q__sonnet__r1,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-10,aggregate,1,right,True,9.3,False,3,1,0
+g5-10__Q__sonnet__r2,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-10,aggregate,2,right,False,13.4,False,3,1,0
+g5-10__Q__sonnet__r3,"Claude, no code, HubSQL",claude-sonnet-5-5,Q,g5-10,aggregate,3,right,True,11.5,False,3,1,0
+g5-10__S-code__gpt61sol__r1,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-10,aggregate,1,right,False,138.2,False,97,0,0
+g5-10__S-code__gpt61sol__r2,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-10,aggregate,2,right,False,115.4,False,184,0,180
+g5-10__S-code__gpt61sol__r3,"Codex, search + shell",gpt-6.1-sol (xhigh),S-code,g5-10,aggregate,3,right,False,106.9,False,118,0,111
+g5-10__S-code__sonnet__r1,"Claude with code, search",claude-sonnet-5-5,S-code,g5-10,aggregate,1,right,True,142.2,False,437,0,435
+g5-10__S-code__sonnet__r2,"Claude with code, search",claude-sonnet-5-5,S-code,g5-10,aggregate,2,right,False,157.9,False,566,0,566
+g5-10__S-code__sonnet__r3,"Claude with code, search",claude-sonnet-5-5,S-code,g5-10,aggregate,3,right,False,87.1,False,287,0,287
+g5-10__S-expert__gpt61sol__r1,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-10,aggregate,1,right,False,184.4,False,196,0,0
+g5-10__S-expert__gpt61sol__r2,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-10,aggregate,2,right,False,168.7,False,194,0,0
+g5-10__S-expert__gpt61sol__r3,"Codex, search + guide",gpt-6.1-sol (xhigh),S-expert,g5-10,aggregate,3,right,False,127.0,False,181,0,0
+g5-10__S-expert__sonnet__r1,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-10,aggregate,1,right,True,118.4,False,44,0,0
+g5-10__S-expert__sonnet__r2,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-10,aggregate,2,right,True,136.6,False,57,0,0
+g5-10__S-expert__sonnet__r3,"Claude, no code, search + guide",claude-sonnet-5-5,S-expert,g5-10,aggregate,3,right,False,267.4,False,139,0,0
+g5-10__S__gpt61sol__r1,"Codex, search",gpt-6.1-sol (xhigh),S,g5-10,aggregate,1,right,False,183.8,False,184,0,0
+g5-10__S__gpt61sol__r2,"Codex, search",gpt-6.1-sol (xhigh),S,g5-10,aggregate,2,right,False,199.5,False,191,0,0
+g5-10__S__gpt61sol__r3,"Codex, search",gpt-6.1-sol (xhigh),S,g5-10,aggregate,3,right,False,145.4,False,184,0,0
+g5-10__S__sonnet__r1,"Claude, no code, search",claude-sonnet-5-5,S,g5-10,aggregate,1,wrong,True,30.2,False,3,0,0
+g5-10__S__sonnet__r2,"Claude, no code, search",claude-sonnet-5-5,S,g5-10,aggregate,2,right,True,79.8,False,39,0,0
+g5-10__S__sonnet__r3,"Claude, no code, search",claude-sonnet-5-5,S,g5-10,aggregate,3,wrong,True,22.5,False,1,0,0

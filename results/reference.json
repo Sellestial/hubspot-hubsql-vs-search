@@ -1,0 +1,1022 @@
+{
+ "export 20261007T103434Z": {
+  "records": {
+   "contacts": 501752,
+   "companies": 231501
+  },
+  "answers": {
+   "g1-05": {
+    "value": 9574
+   },
+   "g1-09": {
+    "value": 11358
+   },
+   "g2-04": {
+    "top": [
+     [
+      "United States of America (the)",
+      18987
+     ],
+     [
+      "United Kingdom of Great Britain and Northern Ireland (the)",
+      3399
+     ],
+     [
+      "Germany",
+      1413
+     ],
+     [
+      "Canada",
+      1319
+     ],
+     [
+      "France",
+      1158
+     ],
+     [
+      "Netherlands (the)",
+      718
+     ],
+     [
+      "Spain",
+      509
+     ],
+     [
+      "Sweden",
+      392
+     ],
+     [
+      "Switzerland",
+      390
+     ],
+     [
+      "Australia",
+      346
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "Finland",
+     298
+    ]
+   },
+   "g2-10": {
+    "top": [
+     [
+      "OFFLINE",
+      79
+     ],
+     [
+      "SOCIAL_MEDIA",
+      4
+     ],
+     [
+      "DIRECT_TRAFFIC",
+      3
+     ]
+    ],
+    "tied_at_last": [],
+    "full_list": true,
+    "labels": {
+     "DIRECT_TRAFFIC": "Direct Traffic",
+     "OFFLINE": "Offline Sources",
+     "SOCIAL_MEDIA": "Organic Social"
+    }
+   },
+   "g3-02": {
+    "rows": {
+     "2025-Q1": 75,
+     "2025-Q2": 35188,
+     "2025-Q3": 38007,
+     "2025-Q4": 59079
+    }
+   },
+   "g3-04": {
+    "matrix": {
+     "3859192028": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "3930854623": {
+      "marketing": 45,
+      "non-marketing": 476317
+     },
+     "customer": {
+      "marketing": 10,
+      "non-marketing": 82
+     },
+     "evangelist": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "lead": {
+      "marketing": 60,
+      "non-marketing": 22511
+     },
+     "marketingqualifiedlead": {
+      "marketing": 0,
+      "non-marketing": 15
+     },
+     "opportunity": {
+      "marketing": 71,
+      "non-marketing": 1377
+     },
+     "other": {
+      "marketing": 1,
+      "non-marketing": 1067
+     },
+     "salesqualifiedlead": {
+      "marketing": 1,
+      "non-marketing": 193
+     }
+    },
+    "labels": {
+     "3859192028": "Advocate",
+     "3930854623": "Record",
+     "customer": "Value Creator",
+     "evangelist": "Champion",
+     "lead": "Audience",
+     "marketingqualifiedlead": "Researcher",
+     "opportunity": "Buyer",
+     "other": "Other",
+     "salesqualifiedlead": "Hand Raiser"
+    }
+   },
+   "g4-09": {
+    "top": [
+     [
+      "california",
+      13563
+     ],
+     [
+      "new york",
+      7269
+     ],
+     [
+      "texas",
+      5853
+     ],
+     [
+      "florida",
+      4577
+     ],
+     [
+      "illinois",
+      3628
+     ],
+     [
+      "massachusetts",
+      3174
+     ],
+     [
+      "pennsylvania",
+      2517
+     ],
+     [
+      "georgia",
+      2446
+     ],
+     [
+      "new jersey",
+      2274
+     ],
+     [
+      "ohio",
+      2269
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "virginia",
+     2105
+    ],
+    "distinct": 258,
+    "with_value": 76460
+   },
+   "g4-10": {
+    "top": [
+     [
+      "software development",
+      9739
+     ],
+     [
+      "advertising services",
+      6302
+     ],
+     [
+      "it services and it consulting",
+      6118
+     ],
+     [
+      "financial services",
+      3686
+     ],
+     [
+      "technology, information and internet",
+      3506
+     ],
+     [
+      "business consulting and services",
+      3072
+     ],
+     [
+      "marketing services",
+      2310
+     ],
+     [
+      "real estate",
+      1600
+     ],
+     [
+      "computer software",
+      1441
+     ],
+     [
+      "non-profit organizations",
+      1407
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "hospitals and health care",
+     1332
+    ],
+    "distinct": 501,
+    "with_value": 93727
+   },
+   "g5-09": {
+    "value": 1.0,
+    "n": 1
+   },
+   "g5-10": {
+    "value": 52.3863184785694,
+    "n": 35230
+   }
+  }
+ },
+ "export 20261007T161804Z": {
+  "records": {
+   "contacts": 501755,
+   "companies": 231503
+  },
+  "answers": {
+   "g1-05": {
+    "value": 9574
+   },
+   "g1-09": {
+    "value": 11359
+   },
+   "g2-04": {
+    "top": [
+     [
+      "United States of America (the)",
+      18987
+     ],
+     [
+      "United Kingdom of Great Britain and Northern Ireland (the)",
+      3399
+     ],
+     [
+      "Germany",
+      1413
+     ],
+     [
+      "Canada",
+      1319
+     ],
+     [
+      "France",
+      1158
+     ],
+     [
+      "Netherlands (the)",
+      718
+     ],
+     [
+      "Spain",
+      509
+     ],
+     [
+      "Sweden",
+      392
+     ],
+     [
+      "Switzerland",
+      390
+     ],
+     [
+      "Australia",
+      346
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "Finland",
+     298
+    ]
+   },
+   "g2-10": {
+    "top": [
+     [
+      "OFFLINE",
+      79
+     ],
+     [
+      "SOCIAL_MEDIA",
+      4
+     ],
+     [
+      "DIRECT_TRAFFIC",
+      3
+     ]
+    ],
+    "tied_at_last": [],
+    "full_list": true,
+    "labels": {
+     "DIRECT_TRAFFIC": "Direct Traffic",
+     "OFFLINE": "Offline Sources",
+     "SOCIAL_MEDIA": "Organic Social"
+    }
+   },
+   "g3-02": {
+    "rows": {
+     "2025-Q1": 75,
+     "2025-Q2": 35188,
+     "2025-Q3": 38007,
+     "2025-Q4": 59079
+    }
+   },
+   "g3-04": {
+    "matrix": {
+     "3859192028": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "3930854623": {
+      "marketing": 47,
+      "non-marketing": 476318
+     },
+     "customer": {
+      "marketing": 10,
+      "non-marketing": 82
+     },
+     "evangelist": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "lead": {
+      "marketing": 60,
+      "non-marketing": 22511
+     },
+     "marketingqualifiedlead": {
+      "marketing": 0,
+      "non-marketing": 15
+     },
+     "opportunity": {
+      "marketing": 71,
+      "non-marketing": 1377
+     },
+     "other": {
+      "marketing": 1,
+      "non-marketing": 1067
+     },
+     "salesqualifiedlead": {
+      "marketing": 1,
+      "non-marketing": 193
+     }
+    },
+    "labels": {
+     "3859192028": "Advocate",
+     "3930854623": "Record",
+     "customer": "Value Creator",
+     "evangelist": "Champion",
+     "lead": "Audience",
+     "marketingqualifiedlead": "Researcher",
+     "opportunity": "Buyer",
+     "other": "Other",
+     "salesqualifiedlead": "Hand Raiser"
+    }
+   },
+   "g4-09": {
+    "top": [
+     [
+      "california",
+      13563
+     ],
+     [
+      "new york",
+      7270
+     ],
+     [
+      "texas",
+      5853
+     ],
+     [
+      "florida",
+      4577
+     ],
+     [
+      "illinois",
+      3628
+     ],
+     [
+      "massachusetts",
+      3174
+     ],
+     [
+      "pennsylvania",
+      2517
+     ],
+     [
+      "georgia",
+      2446
+     ],
+     [
+      "new jersey",
+      2274
+     ],
+     [
+      "ohio",
+      2269
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "virginia",
+     2105
+    ],
+    "distinct": 258,
+    "with_value": 76461
+   },
+   "g4-10": {
+    "top": [
+     [
+      "software development",
+      9739
+     ],
+     [
+      "advertising services",
+      6302
+     ],
+     [
+      "it services and it consulting",
+      6118
+     ],
+     [
+      "financial services",
+      3686
+     ],
+     [
+      "technology, information and internet",
+      3506
+     ],
+     [
+      "business consulting and services",
+      3072
+     ],
+     [
+      "marketing services",
+      2310
+     ],
+     [
+      "real estate",
+      1600
+     ],
+     [
+      "computer software",
+      1441
+     ],
+     [
+      "non-profit organizations",
+      1407
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "hospitals and health care",
+     1332
+    ],
+    "distinct": 501,
+    "with_value": 93727
+   },
+   "g5-09": {
+    "value": 1.0,
+    "n": 1
+   },
+   "g5-10": {
+    "value": 52.3863184785694,
+    "n": 35230
+   }
+  }
+ },
+ "export 20261007T192038Z": {
+  "records": {
+   "contacts": 501755,
+   "companies": 231503
+  },
+  "answers": {
+   "g1-05": {
+    "value": 9574
+   },
+   "g1-09": {
+    "value": 11359
+   },
+   "g2-04": {
+    "top": [
+     [
+      "United States of America (the)",
+      18987
+     ],
+     [
+      "United Kingdom of Great Britain and Northern Ireland (the)",
+      3399
+     ],
+     [
+      "Germany",
+      1413
+     ],
+     [
+      "Canada",
+      1319
+     ],
+     [
+      "France",
+      1158
+     ],
+     [
+      "Netherlands (the)",
+      718
+     ],
+     [
+      "Spain",
+      509
+     ],
+     [
+      "Sweden",
+      392
+     ],
+     [
+      "Switzerland",
+      390
+     ],
+     [
+      "Australia",
+      346
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "Finland",
+     298
+    ]
+   },
+   "g2-10": {
+    "top": [
+     [
+      "OFFLINE",
+      79
+     ],
+     [
+      "SOCIAL_MEDIA",
+      4
+     ],
+     [
+      "DIRECT_TRAFFIC",
+      3
+     ]
+    ],
+    "tied_at_last": [],
+    "full_list": true,
+    "labels": {
+     "DIRECT_TRAFFIC": "Direct Traffic",
+     "OFFLINE": "Offline Sources",
+     "SOCIAL_MEDIA": "Organic Social"
+    }
+   },
+   "g3-02": {
+    "rows": {
+     "2025-Q1": 75,
+     "2025-Q2": 35188,
+     "2025-Q3": 38007,
+     "2025-Q4": 59079
+    }
+   },
+   "g3-04": {
+    "matrix": {
+     "3859192028": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "3930854623": {
+      "marketing": 47,
+      "non-marketing": 476318
+     },
+     "customer": {
+      "marketing": 10,
+      "non-marketing": 82
+     },
+     "evangelist": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "lead": {
+      "marketing": 60,
+      "non-marketing": 22511
+     },
+     "marketingqualifiedlead": {
+      "marketing": 0,
+      "non-marketing": 15
+     },
+     "opportunity": {
+      "marketing": 71,
+      "non-marketing": 1377
+     },
+     "other": {
+      "marketing": 1,
+      "non-marketing": 1067
+     },
+     "salesqualifiedlead": {
+      "marketing": 1,
+      "non-marketing": 193
+     }
+    },
+    "labels": {
+     "3859192028": "Advocate",
+     "3930854623": "Record",
+     "customer": "Value Creator",
+     "evangelist": "Champion",
+     "lead": "Audience",
+     "marketingqualifiedlead": "Researcher",
+     "opportunity": "Buyer",
+     "other": "Other",
+     "salesqualifiedlead": "Hand Raiser"
+    }
+   },
+   "g4-09": {
+    "top": [
+     [
+      "california",
+      13563
+     ],
+     [
+      "new york",
+      7270
+     ],
+     [
+      "texas",
+      5853
+     ],
+     [
+      "florida",
+      4577
+     ],
+     [
+      "illinois",
+      3628
+     ],
+     [
+      "massachusetts",
+      3174
+     ],
+     [
+      "pennsylvania",
+      2517
+     ],
+     [
+      "georgia",
+      2446
+     ],
+     [
+      "new jersey",
+      2274
+     ],
+     [
+      "ohio",
+      2269
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "virginia",
+     2105
+    ],
+    "distinct": 258,
+    "with_value": 76461
+   },
+   "g4-10": {
+    "top": [
+     [
+      "software development",
+      9739
+     ],
+     [
+      "advertising services",
+      6302
+     ],
+     [
+      "it services and it consulting",
+      6118
+     ],
+     [
+      "financial services",
+      3686
+     ],
+     [
+      "technology, information and internet",
+      3506
+     ],
+     [
+      "business consulting and services",
+      3072
+     ],
+     [
+      "marketing services",
+      2310
+     ],
+     [
+      "real estate",
+      1600
+     ],
+     [
+      "computer software",
+      1441
+     ],
+     [
+      "non-profit organizations",
+      1407
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "hospitals and health care",
+     1332
+    ],
+    "distinct": 501,
+    "with_value": 93727
+   },
+   "g5-09": {
+    "value": 1.0,
+    "n": 1
+   },
+   "g5-10": {
+    "value": 52.3863184785694,
+    "n": 35230
+   }
+  }
+ },
+ "export 20261007T213538Z": {
+  "records": {
+   "contacts": 501755,
+   "companies": 231503
+  },
+  "answers": {
+   "g1-05": {
+    "value": 9574
+   },
+   "g1-09": {
+    "value": 11359
+   },
+   "g2-04": {
+    "top": [
+     [
+      "United States of America (the)",
+      18987
+     ],
+     [
+      "United Kingdom of Great Britain and Northern Ireland (the)",
+      3399
+     ],
+     [
+      "Germany",
+      1413
+     ],
+     [
+      "Canada",
+      1319
+     ],
+     [
+      "France",
+      1158
+     ],
+     [
+      "Netherlands (the)",
+      718
+     ],
+     [
+      "Spain",
+      509
+     ],
+     [
+      "Sweden",
+      392
+     ],
+     [
+      "Switzerland",
+      390
+     ],
+     [
+      "Australia",
+      346
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "Finland",
+     298
+    ]
+   },
+   "g2-10": {
+    "top": [
+     [
+      "OFFLINE",
+      79
+     ],
+     [
+      "SOCIAL_MEDIA",
+      4
+     ],
+     [
+      "DIRECT_TRAFFIC",
+      3
+     ]
+    ],
+    "tied_at_last": [],
+    "full_list": true,
+    "labels": {
+     "DIRECT_TRAFFIC": "Direct Traffic",
+     "OFFLINE": "Offline Sources",
+     "SOCIAL_MEDIA": "Organic Social"
+    }
+   },
+   "g3-02": {
+    "rows": {
+     "2025-Q1": 75,
+     "2025-Q2": 35188,
+     "2025-Q3": 38007,
+     "2025-Q4": 59079
+    }
+   },
+   "g3-04": {
+    "matrix": {
+     "3859192028": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "3930854623": {
+      "marketing": 47,
+      "non-marketing": 476318
+     },
+     "customer": {
+      "marketing": 10,
+      "non-marketing": 82
+     },
+     "evangelist": {
+      "marketing": 0,
+      "non-marketing": 1
+     },
+     "lead": {
+      "marketing": 60,
+      "non-marketing": 22511
+     },
+     "marketingqualifiedlead": {
+      "marketing": 0,
+      "non-marketing": 15
+     },
+     "opportunity": {
+      "marketing": 71,
+      "non-marketing": 1377
+     },
+     "other": {
+      "marketing": 1,
+      "non-marketing": 1067
+     },
+     "salesqualifiedlead": {
+      "marketing": 1,
+      "non-marketing": 193
+     }
+    },
+    "labels": {
+     "3859192028": "Advocate",
+     "3930854623": "Record",
+     "customer": "Value Creator",
+     "evangelist": "Champion",
+     "lead": "Audience",
+     "marketingqualifiedlead": "Researcher",
+     "opportunity": "Buyer",
+     "other": "Other",
+     "salesqualifiedlead": "Hand Raiser"
+    }
+   },
+   "g4-09": {
+    "top": [
+     [
+      "california",
+      13563
+     ],
+     [
+      "new york",
+      7270
+     ],
+     [
+      "texas",
+      5853
+     ],
+     [
+      "florida",
+      4577
+     ],
+     [
+      "illinois",
+      3628
+     ],
+     [
+      "massachusetts",
+      3174
+     ],
+     [
+      "pennsylvania",
+      2517
+     ],
+     [
+      "georgia",
+      2446
+     ],
+     [
+      "new jersey",
+      2274
+     ],
+     [
+      "ohio",
+      2269
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "virginia",
+     2105
+    ],
+    "distinct": 258,
+    "with_value": 76461
+   },
+   "g4-10": {
+    "top": [
+     [
+      "software development",
+      9739
+     ],
+     [
+      "advertising services",
+      6302
+     ],
+     [
+      "it services and it consulting",
+      6118
+     ],
+     [
+      "financial services",
+      3686
+     ],
+     [
+      "technology, information and internet",
+      3506
+     ],
+     [
+      "business consulting and services",
+      3072
+     ],
+     [
+      "marketing services",
+      2310
+     ],
+     [
+      "real estate",
+      1600
+     ],
+     [
+      "computer software",
+      1441
+     ],
+     [
+      "non-profit organizations",
+      1407
+     ]
+    ],
+    "tied_at_last": [],
+    "next": [
+     "hospitals and health care",
+     1332
+    ],
+    "distinct": 501,
+    "with_value": 93727
+   },
+   "g5-09": {
+    "value": 1.0,
+    "n": 1
+   },
+   "g5-10": {
+    "value": 52.3863184785694,
+    "n": 35230
+   }
+  }
+ }
+}

@@ -1,0 +1,352 @@
+[
+ {
+  "id": "g1-01",
+  "group": "count",
+  "question": "How many new contacts were created in September 2026?",
+  "definition": "Object: contacts (active records). Count records with createdate >= 2026-09-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Answer: one integer, exact match.",
+  "why_realistic": "Monthly new-record volume is the most common pulse check a RevOps team runs on its database."
+ },
+ {
+  "id": "g1-02",
+  "group": "count",
+  "question": "How many marketing contacts do we have right now?",
+  "definition": "Object: contacts (active records). Count records where hs_marketable_status = 'true' (label: Marketing contact). Records with 'false' or an empty value are not counted. No time filter (state at export time). Answer: one integer, exact match.",
+  "why_realistic": "Marketing contacts drive the HubSpot bill, so ops checks this number before every tier or renewal discussion."
+ },
+ {
+  "id": "g1-03",
+  "group": "count",
+  "question": "How many company records don't have a domain?",
+  "definition": "Object: companies (active records). Count records where domain is empty (property missing, empty string, or only whitespace). Answer: one integer, exact match.",
+  "why_realistic": "Records without a domain cannot be deduplicated or enriched, so data-hygiene reviews start with this number."
+ },
+ {
+  "id": "g1-04",
+  "group": "count",
+  "question": "How many companies headquartered in Germany (LinkedIn HQ country) have between 50 and 500 employees?",
+  "definition": "Object: companies (active records). Count records where hq_country_linkedin is the option with label 'Germany' AND numberofemployees >= 50 AND numberofemployees <= 500 (both bounds inclusive). Records with an empty hq_country_linkedin or an empty numberofemployees are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Sizing a territory or campaign segment by country and company size is a standard weekly ops request."
+ },
+ {
+  "id": "g1-05",
+  "group": "count",
+  "question": "How many contacts have RevOps or Revenue Operations in their job title?",
+  "definition": "Object: contacts (active records). Count records whose jobtitle, compared case-insensitively, contains the substring 'revops' OR the substring 'revenue operations' (a record that matches both counts once). Other spellings such as 'Rev Ops' or 'Rev-Ops' do not count. Empty jobtitle is not counted. Answer: one integer, exact match.",
+  "why_realistic": "A company that sells to RevOps teams sizes its core persona in the prospect database all the time."
+ },
+ {
+  "id": "g1-06",
+  "group": "count",
+  "question": "How many contacts does Koalify flag as having at least one duplicate?",
+  "definition": "Object: contacts (active records). Count records with koalify_number_of_duplicates >= 1. Records with 0 or an empty value are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Ops teams track the duplicate backlog that their dedup tool reports before a cleanup sprint."
+ },
+ {
+  "id": "g1-07",
+  "group": "count",
+  "question": "How many companies have both HubSpot and Salesforce listed as their CRM?",
+  "definition": "Object: companies (active records). Field crm is a multi-select (checkbox) stored as option values separated by ';'. Count records whose crm includes BOTH the option with label 'HubSpot' AND the option with label 'Salesforce'. Records with an empty crm are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Companies that run two CRMs side by side are a classic migration or data-sync target for a RevOps vendor."
+ },
+ {
+  "id": "g1-08",
+  "group": "count",
+  "question": "(redacted: uses fields of a second brand in the same portal)",
+  "definition": "(redacted)",
+  "why_realistic": "(redacted)"
+ },
+ {
+  "id": "g1-09",
+  "group": "count",
+  "question": "How many companies were founded in 2020 or later?",
+  "definition": "Object: companies (active records). founded_year is a text field. Trim the value; count records whose trimmed founded_year consists of exactly 4 digits and whose integer value is >= 2020 (no upper bound). Values that are empty or not exactly 4 digits are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Young, fast-growing companies are a common target segment, and founding year is the usual proxy for it."
+ },
+ {
+  "id": "g1-10",
+  "group": "count",
+  "question": "How many contacts did we last contact during Q3 2026 (July to September)?",
+  "definition": "Object: contacts (active records). Count records with notes_last_contacted >= 2026-07-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Empty values are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Sales ops reviews quarterly outreach coverage to see how much of the database was actually touched."
+ },
+ {
+  "id": "g2-01",
+  "group": "dropdown-ranking",
+  "question": "Give me a breakdown of all our contacts by lifecycle stage, biggest first.",
+  "definition": "Object: contacts (active records). Group all records by lifecyclestage (single-select). List every option that has at least 1 record, with its count. Empty values excluded. Order by count descending; ties ordered by option label ascending (case-insensitive). Order inside a tie is not scored. This portal renames some stages (for example internal value 'lead' has label 'Audience', 'opportunity' has label 'Buyer'). Options may be named by their label or their internal value; both are accepted. Answer: full ordered list of option + count. All counts must match exactly.",
+  "why_realistic": "The lifecycle funnel snapshot is the first slide of almost every pipeline or database review."
+ },
+ {
+  "id": "g2-02",
+  "group": "dropdown-ranking",
+  "question": "What were the top 5 original traffic sources for contacts created between January and September 2026?",
+  "definition": "Object: contacts (active records). Filter createdate >= 2026-01-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Group by hs_analytics_source (single-select, 10 options, internal values such as OFFLINE, ORGANIC_SEARCH, DIRECT_TRAFFIC). Empty values excluded. Top 5 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 5, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 5 option + count. All counts must match exactly.",
+  "why_realistic": "Marketing ops reports year-to-date source mix to show which channels feed the database."
+ },
+ {
+  "id": "g2-03",
+  "group": "dropdown-ranking",
+  "question": "What are the top 10 industries among our companies?",
+  "definition": "Object: companies (active records). Group by industry (single-select, 148 options, internal values such as COMPUTER_SOFTWARE). Empty values excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Industry mix is the first thing anyone checks when judging whether the prospect database fits the ICP."
+ },
+ {
+  "id": "g2-04",
+  "group": "dropdown-ranking",
+  "question": "Which 10 HQ countries have the most ICP companies?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Group by hq_country_linkedin (single-select). Records with an empty hq_country_linkedin are excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Territory planning starts with where the ICP accounts are headquartered."
+ },
+ {
+  "id": "g2-05",
+  "group": "dropdown-ranking",
+  "question": "Rank the CRMs our companies use, from most to least common.",
+  "definition": "Object: companies (active records). Field crm (7 options). The field is a multi-select (checkbox) stored as option values separated by ';'. A record counts once for each option it includes. Records with an empty crm are excluded. List every option that has at least 1 record. Order by count descending; ties ordered by option label ascending (case-insensitive). Order inside a tie is not scored. Options may be named by their label or their internal value; both are accepted. Answer: full ordered list of option + count. All counts must match exactly.",
+  "why_realistic": "For a CRM-focused vendor, the installed-CRM mix of the prospect base decides which integrations and campaigns come first."
+ },
+ {
+  "id": "g2-06",
+  "group": "dropdown-ranking",
+  "question": "What are the 15 most common web technologies across our company records?",
+  "definition": "Object: companies (active records). Field web_technologies (712 options). The field is a multi-select (checkbox) stored as option values separated by ';'. A record counts once for each option it includes. Records with an empty web_technologies are excluded. Top 15 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 15, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 15 option + count. All counts must match exactly.",
+  "why_realistic": "Technographic targeting (who runs which tools) is a standard way to build outbound segments."
+ },
+ {
+  "id": "g2-07",
+  "group": "dropdown-ranking",
+  "question": "Among companies with 11 to 200 employees, what are the 10 most common company keywords?",
+  "definition": "Object: companies (active records). Filter numberofemployees >= 11 AND <= 200 (inclusive; empty numberofemployees excluded). Field hs_keywords (1,583 options). The field is a multi-select (checkbox) stored as option values separated by ';'. A record counts once for each option it includes. Records with an empty hs_keywords are excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Marketing ops looks at what small and mid-size accounts say they do before writing segment messaging."
+ },
+ {
+  "id": "g2-08",
+  "group": "dropdown-ranking",
+  "question": "Which 10 countries have the most contacts who posted on LinkedIn in the last 30 days? Use the Country/Region Code field.",
+  "definition": "Object: contacts (active records). Filter linkedin_posted_last_30_days = the affirmative option (the option that means the contact did post; for example label 'Yes' or value 'true'). Group by hs_country_region_code (single-select, ISO country codes). Records with an empty hs_country_region_code are excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Active LinkedIn posters are the best social-selling targets, and the team wants to know which markets they sit in."
+ },
+ {
+  "id": "g2-09",
+  "group": "dropdown-ranking",
+  "question": "(redacted: uses fields of a second brand in the same portal)",
+  "definition": "(redacted)",
+  "why_realistic": "(redacted)"
+ },
+ {
+  "id": "g2-10",
+  "group": "dropdown-ranking",
+  "question": "Rank the latest traffic sources for contacts whose latest source date falls in September 2026.",
+  "definition": "Object: contacts (active records). Filter hs_latest_source_timestamp >= 2026-09-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Group by hs_latest_source (single-select, 10 options). Empty values excluded. List every option that has at least 1 record. Order by count descending; ties ordered by option label ascending (case-insensitive). Order inside a tie is not scored. Options may be named by their label or their internal value; both are accepted. Answer: full ordered list of option + count. All counts must match exactly.",
+  "why_realistic": "A monthly marketing report shows which channels brought contacts back last month."
+ },
+ {
+  "id": "g3-01",
+  "group": "breakdown",
+  "question": "How many contacts did we create each month from January to September 2026?",
+  "definition": "Object: contacts (active records). Filter createdate >= 2026-01-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Bucket by calendar month of createdate in UTC. Answer: table with exactly 9 rows (2026-01 to 2026-09) and the count for each month; a month with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "A month-by-month growth table of the database is a standard part of the monthly ops report."
+ },
+ {
+  "id": "g3-02",
+  "group": "breakdown",
+  "question": "How many company records were created in each quarter of 2025?",
+  "definition": "Object: companies (active records). Filter createdate >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z (UTC). Bucket by calendar quarter in UTC (Q1 = Jan-Mar, Q2 = Apr-Jun, Q3 = Jul-Sep, Q4 = Oct-Dec). Answer: table with exactly 4 rows (2025-Q1 to 2025-Q4) and the count for each; a quarter with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "Quarterly import and creation volume is what ops compares when planning data budgets for the next year."
+ },
+ {
+  "id": "g3-03",
+  "group": "breakdown",
+  "question": "Split the contacts created in July, August and September 2026 by original traffic source, per month.",
+  "definition": "Object: contacts (active records). Filter createdate >= 2026-07-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Rows: calendar month of createdate in UTC (2026-07, 2026-08, 2026-09). Columns: hs_analytics_source option (label or internal value accepted). Records with an empty hs_analytics_source are excluded. Cells: record count. A cell with no records may be shown as 0 or left out; every non-zero cell must match exactly.",
+  "why_realistic": "Marketing ops builds this month-by-channel table for the quarterly channel review."
+ },
+ {
+  "id": "g3-04",
+  "group": "breakdown",
+  "question": "For each lifecycle stage, how many contacts are marketing contacts and how many are not?",
+  "definition": "Object: contacts (active records). Rows: lifecyclestage option (label or internal value accepted; this portal renames some stages, for example 'lead' = 'Audience'); only stages with at least 1 contact. Columns: 'marketing' = hs_marketable_status is 'true'; 'non-marketing' = hs_marketable_status is 'false'. Records with an empty value in either field are excluded. Cells: record count; a zero cell is shown as 0. All counts must match exactly.",
+  "why_realistic": "Ops decides which stages to set as non-marketing to cut HubSpot costs, and needs exactly this table for it."
+ },
+ {
+  "id": "g3-05",
+  "group": "breakdown",
+  "question": "How many companies had their last enrichment attempt in each month from April to September 2026, split by the attempt status?",
+  "definition": "Object: companies (active records). Filter last_enrichment_attempt_at >= 2026-04-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Rows: calendar month in UTC (2026-04 to 2026-09). Columns: last_enrichment_attempt_status, grouped after trimming spaces and comparing case-insensitively (no other merging); records with an empty status go into a column '(no status)'. Cells: record count. A cell with no records may be shown as 0 or left out; every non-zero cell must match exactly.",
+  "why_realistic": "Ops monitors the enrichment job month by month to catch a rise in failures or empty results."
+ },
+ {
+  "id": "g3-06",
+  "group": "breakdown",
+  "question": "How many ICP companies fall into each employee range?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Group by hs_employee_range (text field), grouped after trimming spaces and comparing case-insensitively (no other merging). Records with an empty hs_employee_range are excluded. Answer: table of every employee range value with its count (row order is not scored). All counts must match exactly.",
+  "why_realistic": "The size profile of the ICP list decides how the team splits accounts between SMB and mid-market plays."
+ },
+ {
+  "id": "g3-07",
+  "group": "breakdown",
+  "question": "How many contacts entered the Buyer lifecycle stage in each month from January to September 2026?",
+  "definition": "Object: contacts (active records). Use hs_v2_date_entered_opportunity (label: Date entered 'Buyer (Lifecycle Stage Pipeline)'); each contact has one stored value and counts once, in the month of that value. Filter >= 2026-01-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC); bucket by calendar month in UTC. Empty values excluded. Answer: table with exactly 9 rows (2026-01 to 2026-09); a month with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "Monthly stage-entry counts are how RevOps tracks pipeline creation when deals are not used."
+ },
+ {
+  "id": "g3-08",
+  "group": "breakdown",
+  "question": "How many contacts had their last Bison email sent in each month from April to September 2026?",
+  "definition": "Object: contacts (active records). Filter sellestial_bison_last_sent >= 2026-04-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Bucket by calendar month in UTC. Empty values excluded. Answer: table with exactly 6 rows (2026-04 to 2026-09); a month with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "Sales ops checks the send volume of the cold-email tool by month to see if outreach kept its pace."
+ },
+ {
+  "id": "g3-09",
+  "group": "breakdown",
+  "question": "Cross-tab our RevOps persona contacts against whether they posted on LinkedIn in the last 30 days.",
+  "definition": "Object: contacts (active records). Only records where revops_persona is not empty AND linkedin_posted_last_30_days is not empty. Rows: revops_persona option (2 options). Columns: linkedin_posted_last_30_days option (2 options). Options may be named by their label or their internal value; both are accepted. Cells: record count; a zero cell is shown as 0. Answer: 2 x 2 table. All counts must match exactly.",
+  "why_realistic": "Before a social-selling push, the team wants to know which persona is active on LinkedIn."
+ },
+ {
+  "id": "g4-01",
+  "group": "free-text-ranking",
+  "question": "What are the 10 most common job titles in our contact database?",
+  "definition": "Object: contacts (active records). Field jobtitle. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Persona discovery from job titles is one of the first things anyone does with a prospect database."
+ },
+ {
+  "id": "g4-02",
+  "group": "free-text-ranking",
+  "question": "Which 10 countries have the most contacts, going by the Country/Region text field?",
+  "definition": "Object: contacts (active records). Field country (free text; not hs_country_region_code). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Geographic distribution of contacts is needed for territory planning and send-time decisions."
+ },
+ {
+  "id": "g4-03",
+  "group": "free-text-ranking",
+  "question": "What are the top 10 cities for our ICP companies?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Field city. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Event planning and field-marketing decisions start from where the ICP accounts cluster."
+ },
+ {
+  "id": "g4-04",
+  "group": "free-text-ranking",
+  "question": "Which 10 email domains are most common among our contacts?",
+  "definition": "Object: contacts (active records). Field hs_email_domain. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Ops checks top email domains to find free-mail addresses and over-represented accounts."
+ },
+ {
+  "id": "g4-05",
+  "group": "free-text-ranking",
+  "question": "Which company names show up most often on our contacts? Top 10.",
+  "definition": "Object: contacts (active records). Field company (the contact's Company Name text field; no associations used). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Finding the accounts with the most contacts tells sales where multi-threading is already possible."
+ },
+ {
+  "id": "g4-06",
+  "group": "free-text-ranking",
+  "question": "What are the 10 most common job titles among contacts at companies with 51 to 200 employees?",
+  "definition": "Object: contacts (active records). Filter on the contact's own number_of_employees field: >= 51 AND <= 200 (inclusive; empty excluded; no associations used). Field jobtitle. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Buyer titles differ by company size, so persona research is usually done per size band."
+ },
+ {
+  "id": "g4-07",
+  "group": "free-text-ranking",
+  "question": "Which company names appear on the most company records? Show the top 10 so we can spot duplicates.",
+  "definition": "Object: companies (active records). Field name. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Repeated company names are the quickest signal of duplicate accounts in a data-hygiene review."
+ },
+ {
+  "id": "g4-08",
+  "group": "free-text-ranking",
+  "question": "Which 10 domains are shared by the most company records?",
+  "definition": "Object: companies (active records). Field domain. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Values are compared as stored (no removal of 'www.' or of a protocol). Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Domain is the dedup key for companies, so shared domains are the first duplicate list ops builds."
+ },
+ {
+  "id": "g4-09",
+  "group": "free-text-ranking",
+  "question": "Which 10 states have the most companies with country code US?",
+  "definition": "Object: companies (active records). Filter hs_country_code = 'US' (after trimming, case-insensitive). Field state. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. (So 'California' and 'CA' stay separate.) Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "US territory carving for SDRs is usually done by state."
+ },
+ {
+  "id": "g4-10",
+  "group": "free-text-ranking",
+  "question": "What are the 10 most common industries on our contacts? I mean the contact-level Industry field.",
+  "definition": "Object: contacts (active records). Field industry (contact text field, not the company dropdown). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Imported contact lists bring their own industry labels, and ops checks them before mapping them to the company picklist."
+ },
+ {
+  "id": "g5-01",
+  "group": "aggregate",
+  "question": "What's the average number of employees across our companies?",
+  "definition": "Object: companies (active records). Average of numberofemployees over records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "Average company size is a quick sanity check of whether the database matches the target market."
+ },
+ {
+  "id": "g5-02",
+  "group": "aggregate",
+  "question": "What's the median employee count of our ICP companies?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Median of numberofemployees over records with a non-empty value (0 counts as a value); with an even number of values, the median is the mean of the two middle values. Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "The median is the honest size of a typical ICP account because a few giants skew the average."
+ },
+ {
+  "id": "g5-03",
+  "group": "aggregate",
+  "question": "What's the total annual revenue of all Computer Software companies in the CRM?",
+  "definition": "Object: companies (active records). Filter industry = COMPUTER_SOFTWARE (label: Computer Software). Sum of annualrevenue over records with a non-empty value (empty values are left out, which equals counting them as 0). Report the number as stored (no currency conversion). Rounding to a whole number is accepted; tolerance +/-0.5%. Answer: one number.",
+  "why_realistic": "Total addressable revenue of a vertical is a typical input for a market-sizing slide."
+ },
+ {
+  "id": "g5-04",
+  "group": "aggregate",
+  "question": "Which contact has the most LinkedIn followers, and how many followers is that?",
+  "definition": "Object: contacts (active records). Maximum of linkedin_followers_count over records with a non-empty value. Answer: the maximum value (exact) and the contact that holds it, identified by firstname + lastname or by record ID (hs_object_id); if several contacts share the maximum, list all of them.",
+  "why_realistic": "The team looks for high-reach contacts to invite to webinars or co-marketing."
+ },
+ {
+  "id": "g5-05",
+  "group": "aggregate",
+  "question": "(redacted: uses fields of a second brand in the same portal)",
+  "definition": "(redacted)",
+  "why_realistic": "(redacted)"
+ },
+ {
+  "id": "g5-06",
+  "group": "aggregate",
+  "question": "On average, how many page views do contacts from organic search have?",
+  "definition": "Object: contacts (active records). Filter hs_analytics_source = ORGANIC_SEARCH (label: Organic Search). Average of hs_analytics_num_page_views over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "Marketing ops compares engagement depth by channel to judge content and SEO performance."
+ },
+ {
+  "id": "g5-07",
+  "group": "aggregate",
+  "question": "(redacted: uses fields of a second brand in the same portal)",
+  "definition": "(redacted)",
+  "why_realistic": "(redacted)"
+ },
+ {
+  "id": "g5-08",
+  "group": "aggregate",
+  "question": "How many contacts, on average, are associated with our ICP companies headquartered in the United States?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true AND hq_country_linkedin = the option with label 'United States'. Average of num_associated_contacts (the company's own rollup field; no association traversal) over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "Contact coverage per target account shows whether the US ICP list is ready for multi-threaded outbound."
+ },
+ {
+  "id": "g5-09",
+  "group": "aggregate",
+  "question": "How many sessions in total have contacts from paid social generated?",
+  "definition": "Object: contacts (active records). Filter hs_analytics_source = PAID_SOCIAL (label: Paid Social). Sum of hs_analytics_num_visits over the filtered records with a non-empty value. Tolerance +/-0.5%. Answer: one number.",
+  "why_realistic": "Marketing ops reports the total site engagement that paid social brought in to justify ad spend."
+ },
+ {
+  "id": "g5-10",
+  "group": "aggregate",
+  "question": "What's the average SEO score of companies that run HubSpot according to BuiltWith?",
+  "definition": "Object: companies (active records). Filter builtwith_contains_hubspot = true. Average of sellestial_seo_score over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "A team selling to HubSpot users checks how strong their web presence is before choosing a pitch angle."
+ },
+ {
+  "id": "g5-11",
+  "group": "aggregate",
+  "question": "On average, how many sales activities are logged on contacts that have an owner?",
+  "definition": "Object: contacts (active records). Filter hubspot_owner_id is not empty. Average of num_notes (Number of Sales Activities) over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "Sales ops checks activity depth on owned contacts to see whether reps actually work what they own."
+ }
+]

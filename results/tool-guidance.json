@@ -1,0 +1,13 @@
+{
+ "seconds": 0.36,
+ "result": {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"instructions\":[{\"instructions\":\"<guidance>\\nIMPORTANT: Follow all guidance below before constructing queries.\\n\\n  <topic name=\\\"owner-resolution\\\">\\n  \\\"I\\\" / \\\"my\\\" / \\\"me\\\" / \\\"mine\\\" -> always WHERE hubspot_owner_id = 'RESOLVED_OWNER_ID'.\\n  Resolve via owner-search or user-details tool.\\n  </topic>\\n\\n  <topic name=\\\"property-resolution\\\">\\n  Before writing any query: (1) call search_properties to find correct internal property names, (2) call get_properties for enum values on any enumeration fields, (3) then construct the query.\\n  </topic>\\n</guidance>\\n\\n<examples>\\n  <example>\\n    <description>Multi-object filter</description>\\n    <sql>SELECT firstname, COMPANY.name FROM CONTACT WHERE COMPANY.industry = 'RETAIL' AND associations.DEAL IS NOT NULL</sql>\\n  </example>\\n  <example>\\n    <description>Top 10 owners by revenue (uses _in_home_currency)</description>\\n    <sql>SELECT hubspot_owner_id, SUM(amount_in_home_currency) FROM DEAL GROUP BY hubspot_owner_id ORDER BY SUM(amount_in_home_currency) DESC LIMIT 10</sql>\\n  </example>\\n  <example>\\n    <description>Monthly revenue trend</description>\\n    <sql>SELECT DATE_TRUNC(closedate, 'MONTH'), SUM(amount_in_home_currency) FROM DEAL WHERE closedate BETWEEN '2025-01-01' AND '2025-12-31' GROUP BY DATE_TRUNC(closedate, 'MONTH')</sql>\\n  </example>\\n  <example>\\n    <description>Lookup by record ID (always use hs_object_id, never \\\"id\\\")</description>\\n    <sql>SELECT hs_object_id, firstname, lastname FROM CONTACT WHERE hs_object_id = '123'</sql>\\n  </example>\\n  <example>\\n    <description>List membership</description>\\n    <sql>SELECT * FROM CONTACT WHERE hs_crm_search.ilsListIds = '8037'</sql>\\n  </example>\\n  <example>\\n    <description>My open deals (resolve owner ID first; \\\"top reps\\\" queries do NOT need this filter)</description>\\n    <sql>SELECT * FROM DEAL WHERE hubspot_owner_id = '12345' AND hs_is_closed = 'false'</sql>\\n  </example>\\n  <example>\\n    <description>How many deals do I have? Break down by stage.</description>\\n    <sql>SELECT dealstage, COUNT(*) FROM DEAL WHERE hubspot_owner_id = '12345' GROUP BY dealstage</sql>\\n    <note>Without hubspot_owner_id filter, this returns ALL deals in the account \u2014 not just the user's.</note>\\n  </example>\\n</examples>\",\"applicableTools\":[\"query_crm_data\"]}],\"toolsWithNoInstructions\":{\"search_crm_objects\":\"NO_INSTRUCTIONS\"}}"
+   }
+  ],
+  "is_error": false,
+  "result_type": "complete"
+ }
+}

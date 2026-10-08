@@ -1,0 +1,72 @@
+[
+ {
+  "id": "g1-05",
+  "group": "count",
+  "question": "How many contacts have RevOps or Revenue Operations in their job title?",
+  "definition": "Object: contacts (active records). Count records whose jobtitle, compared case-insensitively, contains the substring 'revops' OR the substring 'revenue operations' (a record that matches both counts once). Other spellings such as 'Rev Ops' or 'Rev-Ops' do not count. Empty jobtitle is not counted. Answer: one integer, exact match.",
+  "why_realistic": "A company that sells to RevOps teams sizes its core persona in the prospect database all the time."
+ },
+ {
+  "id": "g1-09",
+  "group": "count",
+  "question": "How many companies were founded in 2020 or later?",
+  "definition": "Object: companies (active records). founded_year is a text field. Trim the value; count records whose trimmed founded_year consists of exactly 4 digits and whose integer value is >= 2020 (no upper bound). Values that are empty or not exactly 4 digits are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Young, fast-growing companies are a common target segment, and founding year is the usual proxy for it."
+ },
+ {
+  "id": "g2-04",
+  "group": "dropdown-ranking",
+  "question": "Which 10 HQ countries have the most ICP companies?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Group by hq_country_linkedin (single-select). Records with an empty hq_country_linkedin are excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Territory planning starts with where the ICP accounts are headquartered."
+ },
+ {
+  "id": "g2-10",
+  "group": "dropdown-ranking",
+  "question": "Rank the latest traffic sources for contacts whose latest source date falls in September 2026.",
+  "definition": "Object: contacts (active records). Filter hs_latest_source_timestamp >= 2026-09-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Group by hs_latest_source (single-select, 10 options). Empty values excluded. List every option that has at least 1 record. Order by count descending; ties ordered by option label ascending (case-insensitive). Order inside a tie is not scored. Options may be named by their label or their internal value; both are accepted. Answer: full ordered list of option + count. All counts must match exactly.",
+  "why_realistic": "A monthly marketing report shows which channels brought contacts back last month."
+ },
+ {
+  "id": "g3-02",
+  "group": "breakdown",
+  "question": "How many company records were created in each quarter of 2025?",
+  "definition": "Object: companies (active records). Filter createdate >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z (UTC). Bucket by calendar quarter in UTC (Q1 = Jan-Mar, Q2 = Apr-Jun, Q3 = Jul-Sep, Q4 = Oct-Dec). Answer: table with exactly 4 rows (2025-Q1 to 2025-Q4) and the count for each; a quarter with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "Quarterly import and creation volume is what ops compares when planning data budgets for the next year."
+ },
+ {
+  "id": "g3-04",
+  "group": "breakdown",
+  "question": "For each lifecycle stage, how many contacts are marketing contacts and how many are not?",
+  "definition": "Object: contacts (active records). Rows: lifecyclestage option (label or internal value accepted; this portal renames some stages, for example 'lead' = 'Audience'); only stages with at least 1 contact. Columns: 'marketing' = hs_marketable_status is 'true'; 'non-marketing' = hs_marketable_status is 'false'. Records with an empty value in either field are excluded. Cells: record count; a zero cell is shown as 0. All counts must match exactly.",
+  "why_realistic": "Ops decides which stages to set as non-marketing to cut HubSpot costs, and needs exactly this table for it."
+ },
+ {
+  "id": "g4-09",
+  "group": "free-text-ranking",
+  "question": "Which 10 states have the most companies with country code US?",
+  "definition": "Object: companies (active records). Filter hs_country_code = 'US' (after trimming, case-insensitive). Field state. Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. (So 'California' and 'CA' stay separate.) Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "US territory carving for SDRs is usually done by state."
+ },
+ {
+  "id": "g4-10",
+  "group": "free-text-ranking",
+  "question": "What are the 10 most common industries on our contacts? I mean the contact-level Industry field.",
+  "definition": "Object: contacts (active records). Field industry (contact text field, not the company dropdown). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Imported contact lists bring their own industry labels, and ops checks them before mapping them to the company picklist."
+ },
+ {
+  "id": "g5-09",
+  "group": "aggregate",
+  "question": "How many sessions in total have contacts from paid social generated?",
+  "definition": "Object: contacts (active records). Filter hs_analytics_source = PAID_SOCIAL (label: Paid Social). Sum of hs_analytics_num_visits over the filtered records with a non-empty value. Tolerance +/-0.5%. Answer: one number.",
+  "why_realistic": "Marketing ops reports the total site engagement that paid social brought in to justify ad spend."
+ },
+ {
+  "id": "g5-10",
+  "group": "aggregate",
+  "question": "What's the average SEO score of companies that run HubSpot according to BuiltWith?",
+  "definition": "Object: companies (active records). Filter builtwith_contains_hubspot = true. Average of sellestial_seo_score over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "A team selling to HubSpot users checks how strong their web presence is before choosing a pitch angle."
+ }
+]

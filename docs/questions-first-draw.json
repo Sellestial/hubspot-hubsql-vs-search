@@ -1,0 +1,72 @@
+[
+ {
+  "id": "g1-04",
+  "group": "count",
+  "question": "How many companies headquartered in Germany (LinkedIn HQ country) have between 50 and 500 employees?",
+  "definition": "Object: companies (active records). Count records where hq_country_linkedin is the option with label 'Germany' AND numberofemployees >= 50 AND numberofemployees <= 500 (both bounds inclusive). Records with an empty hq_country_linkedin or an empty numberofemployees are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Sizing a territory or campaign segment by country and company size is a standard weekly ops request."
+ },
+ {
+  "id": "g1-06",
+  "group": "count",
+  "question": "How many contacts does Koalify flag as having at least one duplicate?",
+  "definition": "Object: contacts (active records). Count records with koalify_number_of_duplicates >= 1. Records with 0 or an empty value are not counted. Answer: one integer, exact match.",
+  "why_realistic": "Ops teams track the duplicate backlog that their dedup tool reports before a cleanup sprint."
+ },
+ {
+  "id": "g2-02",
+  "group": "dropdown-ranking",
+  "question": "What were the top 5 original traffic sources for contacts created between January and September 2026?",
+  "definition": "Object: contacts (active records). Filter createdate >= 2026-01-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Group by hs_analytics_source (single-select, 10 options, internal values such as OFFLINE, ORGANIC_SEARCH, DIRECT_TRAFFIC). Empty values excluded. Top 5 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 5, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 5 option + count. All counts must match exactly.",
+  "why_realistic": "Marketing ops reports year-to-date source mix to show which channels feed the database."
+ },
+ {
+  "id": "g2-03",
+  "group": "dropdown-ranking",
+  "question": "What are the top 10 industries among our companies?",
+  "definition": "Object: companies (active records). Group by industry (single-select, 148 options, internal values such as COMPUTER_SOFTWARE). Empty values excluded. Top 10 options. Order by count descending; ties ordered by option label ascending (case-insensitive). If several options tie at place 10, any of the tied options is accepted at that place. Options may be named by their label or their internal value; both are accepted. Answer: ordered list of 10 option + count. All counts must match exactly.",
+  "why_realistic": "Industry mix is the first thing anyone checks when judging whether the prospect database fits the ICP."
+ },
+ {
+  "id": "g3-02",
+  "group": "breakdown",
+  "question": "How many company records were created in each quarter of 2025?",
+  "definition": "Object: companies (active records). Filter createdate >= 2025-01-01T00:00:00Z and < 2026-01-01T00:00:00Z (UTC). Bucket by calendar quarter in UTC (Q1 = Jan-Mar, Q2 = Apr-Jun, Q3 = Jul-Sep, Q4 = Oct-Dec). Answer: table with exactly 4 rows (2025-Q1 to 2025-Q4) and the count for each; a quarter with no records is shown as 0. All counts must match exactly.",
+  "why_realistic": "Quarterly import and creation volume is what ops compares when planning data budgets for the next year."
+ },
+ {
+  "id": "g3-03",
+  "group": "breakdown",
+  "question": "Split the contacts created in July, August and September 2026 by original traffic source, per month.",
+  "definition": "Object: contacts (active records). Filter createdate >= 2026-07-01T00:00:00Z and < 2026-10-01T00:00:00Z (UTC). Rows: calendar month of createdate in UTC (2026-07, 2026-08, 2026-09). Columns: hs_analytics_source option (label or internal value accepted). Records with an empty hs_analytics_source are excluded. Cells: record count. A cell with no records may be shown as 0 or left out; every non-zero cell must match exactly.",
+  "why_realistic": "Marketing ops builds this month-by-channel table for the quarterly channel review."
+ },
+ {
+  "id": "g4-02",
+  "group": "free-text-ranking",
+  "question": "Which 10 countries have the most contacts, going by the Country/Region text field?",
+  "definition": "Object: contacts (active records). Field country (free text; not hs_country_region_code). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Geographic distribution of contacts is needed for territory planning and send-time decisions."
+ },
+ {
+  "id": "g4-10",
+  "group": "free-text-ranking",
+  "question": "What are the 10 most common industries on our contacts? I mean the contact-level Industry field.",
+  "definition": "Object: contacts (active records). Field industry (contact text field, not the company dropdown). Matching: trim leading and trailing spaces, then compare case-insensitively; group by the normalized value. No other merging (different spellings, abbreviations, punctuation or synonyms stay separate). Values that are empty after trimming are excluded. Top 10 values. Order by count descending; ties ordered by normalized value ascending. If several values tie at place 10, any of the tied values is accepted at that place. Values may be reported in any casing. Answer: ordered list of 10 value + count. All counts must match exactly.",
+  "why_realistic": "Imported contact lists bring their own industry labels, and ops checks them before mapping them to the company picklist."
+ },
+ {
+  "id": "g5-02",
+  "group": "aggregate",
+  "question": "What's the median employee count of our ICP companies?",
+  "definition": "Object: companies (active records). Filter sellestial_icp = true. Median of numberofemployees over records with a non-empty value (0 counts as a value); with an even number of values, the median is the mean of the two middle values. Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "The median is the honest size of a typical ICP account because a few giants skew the average."
+ },
+ {
+  "id": "g5-10",
+  "group": "aggregate",
+  "question": "What's the average SEO score of companies that run HubSpot according to BuiltWith?",
+  "definition": "Object: companies (active records). Filter builtwith_contains_hubspot = true. Average of sellestial_seo_score over the filtered records with a non-empty value (0 counts as a value). Round to 1 decimal; tolerance +/-0.5% of the reference value. Answer: one number.",
+  "why_realistic": "A team selling to HubSpot users checks how strong their web presence is before choosing a pitch angle."
+ }
+]
