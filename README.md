@@ -19,6 +19,7 @@ Right answers out of 30 (10 questions x 3 runs). "Search": HubSpot's search tool
 - 29 of the 38 wrong answers were on two questions where a filter returned more records than a literal match, with search and with HubSQL:
   - `LIKE '%revenue operations%'` returned 8,920 contacts; the literal phrase is in 8,147 job titles (matches include "Director of Revenue Cycle Operations"). 15 runs reported 10,347 contacts with RevOps or Revenue Operations in the title; the right number was 9,574.
   - Through the MCP server, `state = 'California'` (search and HubSQL) returned 13,564 US companies, including one in "Estado de Baja California". HubSpot's REST APIs return 13,563.
+- A later check ([docs/check-equals.md](docs/check-equals.md)): through the MCP server, the search tool's state EQ "Virginia" returned 2,175 US companies, which includes all 70 in West Virginia; the REST API returned 2,105. HubSQL returned only errors that day, so this check covers the search tool.
 - Through the MCP server, a grouped HubSQL query treated the end date as a whole day: `< '2026-10-01'` returned 86 contacts as a plain count and 90 when grouped (October 1 included). REST HubSQL returned 86 both ways.
 - Claude flagged doubt in 26 of its 29 wrong answers; GPT-6.1 Sol in none of its 9.
 
@@ -44,7 +45,7 @@ The first version ([pilot-v1](pilot-v1)) used hand-written copies of HubSpot's t
 Requirements: macOS (for the Codex sandbox), Python 3.10+, [uv](https://docs.astral.sh/uv/), a HubSpot portal with HubSQL beta access, Claude Code and/or the Codex CLI.
 
 1. In HubSpot: Development > MCP Connectors > Create MCP connector, redirect URL `http://localhost:6274/oauth/callback`.
-2. Put the credentials in `~/.config/hubsql-bench/env` (or point `HUBSQL_BENCH_ENV` at another file): `MCP_CLIENT_ID`, `MCP_CLIENT_SECRET`, and `HUBSPOT_TOKEN` (a private app token with read scopes, used only for the reference export).
+2. Put the credentials in `~/.config/hubsql-bench/env` (or point `HUBSQL_BENCH_ENV` at another file): `MCP_CLIENT_ID`, `MCP_CLIENT_SECRET`, and `HUBSPOT_TOKEN` (a private app token with read scopes, used only for the reference export and the follow-up check).
 3. Run:
 
 ```bash
